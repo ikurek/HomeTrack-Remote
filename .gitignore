@@ -28,8 +28,3 @@ HELP.md
 
 ### VS Code ###
 .vscode/
-gradle/
-src/main/java/
-src/main/resources/static/
-src/main/resources/templates/
-src/test/

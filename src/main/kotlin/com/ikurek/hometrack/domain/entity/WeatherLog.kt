@@ -25,5 +25,4 @@ data class WeatherLog(
 
         @Column
         val date: ZonedDateTime = ZonedDateTime.now()
-
 )

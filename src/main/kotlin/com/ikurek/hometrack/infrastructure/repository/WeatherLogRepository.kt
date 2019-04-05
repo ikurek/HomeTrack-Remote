@@ -18,9 +18,27 @@ interface WeatherLogRepository : JpaRepository<WeatherLog, Long> {
     @Query("SELECT AVG(log.temperature) FROM WeatherLog log WHERE log.date > ?1")
     fun tryGetAverageTemperature(date: ZonedDateTime): Optional<Double>
 
+    @Query("SELECT MAX(log.temperature) FROM WeatherLog log WHERE log.date > ?1")
+    fun tryGetMaxTemperature(date: ZonedDateTime): Optional<Double>
+
+    @Query("SELECT MIN(log.temperature) FROM WeatherLog log WHERE log.date > ?1")
+    fun tryGetMinTemperature(date: ZonedDateTime): Optional<Double>
+
     @Query("SELECT AVG(log.humidity) FROM WeatherLog log WHERE log.date > ?1")
     fun tryGetAverageHumidity(date: ZonedDateTime): Optional<Double>
 
+    @Query("SELECT MAX(log.humidity) FROM WeatherLog log WHERE log.date > ?1")
+    fun tryGetMaxHumidity(date: ZonedDateTime): Optional<Double>
+
+    @Query("SELECT MIN(log.humidity) FROM WeatherLog log WHERE log.date > ?1")
+    fun tryGetMinHumidity(date: ZonedDateTime): Optional<Double>
+
     @Query("SELECT AVG(log.pressure) FROM WeatherLog log WHERE log.date > ?1")
     fun tryGetAveragePressure(date: ZonedDateTime): Optional<Double>
+
+    @Query("SELECT MAX(log.pressure) FROM WeatherLog log WHERE log.date > ?1")
+    fun tryGetMaxPressure(date: ZonedDateTime): Optional<Double>
+
+    @Query("SELECT Min(log.pressure) FROM WeatherLog log WHERE log.date > ?1")
+    fun tryGetMinPressure(date: ZonedDateTime): Optional<Double>
 }

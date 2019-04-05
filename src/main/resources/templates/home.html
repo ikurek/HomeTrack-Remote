@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="../../favicon.ico" rel="icon">
+
+    <title>Fixed top navbar example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap-material-design.min.css" rel="stylesheet"
+          th:href="@{/css/bootstrap-material-design.min.css}">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/navbar-top-fixed.css" rel="stylesheet" th:href="@{/css/navbar-top-fixed.css}">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#" th:inline="text">Aktualizacja: [[${date}]]</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <!-- NAVBAR entries go here -->
+        </ul>
+    </div>
+</nav>
+
+<main class="container" role="main">
+    <div class="container"/>
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h3 class="my-0 font-weight-normal">Temperatura</h3>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title" th:inline="text">[[${temperature}]]
+                    <small class="text-muted"> °C</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li><h6>Maksymalna:</h6></li>
+                    <p th:inline="text">[[${maxTemperature}]]
+                        <small class="text-muted"> °C</small>
+                    </p>
+                    <li><h6>Minimalna:</h6></li>
+                    <p th:inline="text">[[${minTemperature}]]
+                        <small class="text-muted"> °C</small>
+                    </p>
+                    <li><h6>Średnia:</h6></li>
+                    <p th:inline="text">[[${avgTemperature}]]
+                        <small class="text-muted"> °C</small>
+                    </p>
+                </ul>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h3 class="my-0 font-weight-normal">Wilgotność</h3>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title" th:inline="text">[[${humidity}]]
+                    <small class="text-muted"> %</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li><h6>Maksymalna:</h6></li>
+                    <p th:inline="text">[[${maxHumidity}]]
+                        <small class="text-muted"> %</small>
+                    </p>
+                    <li><h6>Minimalna:</h6></li>
+                    <p th:inline="text">[[${minHumidity}]]
+                        <small class="text-muted"> %</small>
+                    </p>
+                    <li><h6>Średnia:</h6></li>
+                    <p th:inline="text">[[${avgHumidity}]]
+                        <small class="text-muted"> %</small>
+                    </p>
+                </ul>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h3 class="my-0 font-weight-normal">Ciśnienie</h3>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title" th:inline="text">[[${pressure}]]
+                    <small class="text-muted"> hPa</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li><h6>Maksymalna:</h6></li>
+                    <p th:inline="text">[[${maxPressure}]]
+                        <small class="text-muted">%</small>
+                    </p>
+                    <li><h6>Minimalna:</h6></li>
+                    <p th:inline="text">[[${minPressure}]]
+                        <small class="text-muted">%</small>
+                    </p>
+                    <li><h6>Średnia:</h6></li>
+                    <p th:inline="text">[[${avgPressure}]]
+                        <small class="text-muted">%</small>
+                    </p>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>window.jQuery || document.write('<script src="../static/js/jquery-slim.min.js" ><\/script>')</script>
+<script src="../static/js/popper.min.js" th:href="@{/js/popper.min.js}"></script>
+<script src="../static/js/bootstrap-material-design.min.js" th:href="@{/js/bootstrap-material-design.min.js}"></script>
+</body>
+</html>
