@@ -3,33 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta content="" name="description">
-    <meta content="" name="author">
+    <meta content="HomeTrack" name="description">
+    <meta content="Igor Kurek" name="author">
     <link href="../../favicon.ico" rel="icon">
 
-    <title>Fixed top navbar example for Bootstrap</title>
+    <title>HomeTrack - Home Made Air Tracking Software</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap-material-design.min.css" rel="stylesheet"
           th:href="@{/css/bootstrap-material-design.min.css}">
 
     <!-- Custom styles for this template -->
-    <link href="../static/css/navbar-top-fixed.css" rel="stylesheet" th:href="@{/css/navbar-top-fixed.css}">
+    <link href="../static/css/sticky-footer-navbar.css" rel="stylesheet" th:href="@{/css/sticky-footer-navbar.css}">
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#" th:inline="text">Aktualizacja: [[${date}]]</a>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-            <!-- NAVBAR entries go here -->
-        </ul>
-    </div>
-</nav>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#" th:inline="text">Aktualizacja: [[${date}]]</a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <!-- NAVBAR entries go here -->
+            </ul>
+        </div>
+    </nav>
+</header>
 
-<main class="container" role="main">
-    <div class="container"/>
+<main class="container mt-4" role="main">
     <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
             <div class="card-header">
@@ -105,6 +107,12 @@
         </div>
     </div>
 </main>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+    </div>
+</footer>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
